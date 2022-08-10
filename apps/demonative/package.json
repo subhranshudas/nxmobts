@@ -9,6 +9,18 @@
     "react-native": "*",
     "react-native-config": "*",
     "react-native-svg": "*",
-    "@react-native-async-storage/async-storage": "*"
+    "@react-native-async-storage/async-storage": "*",
+    "@react-native-masked-view/masked-view": "*",
+    "react-native-progress-circle": "*",
+    "react-native-video": "*",
+    "react-native-youtube": "*",
+    "react-native-modal": "*",
+    "react-native-device-detection": "*",
+    "moment": "*",
+    "react-native-parsed-text": "*",
+    "expo": ">=45.0.0-0 <46.0.0",
+    "axios": "*",
+    "expo-file-system": "*",
+    "expo-linear-gradient": "*"
   }
 }

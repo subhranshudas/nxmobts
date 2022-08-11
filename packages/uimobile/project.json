@@ -19,6 +19,11 @@
             "glob": "packages/uimobile/README.md",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "packages/uimobile/src/lib/assets/*.*",
+            "input": ".",
+            "output": "lib/assets"
           }
         ],
         "format": [

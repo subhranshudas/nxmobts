@@ -4,10 +4,8 @@ import {
   View,
   Image,
   TouchableWithoutFeedback,
-  ViewStyle,
   ImageResizeMode,
   ImageSourcePropType,
-  Text,
 } from 'react-native';
 
 import * as FileSystem from 'expo-file-system';

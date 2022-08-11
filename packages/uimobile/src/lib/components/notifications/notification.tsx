@@ -47,7 +47,8 @@ export const Notification : React.FC<NotificationProps> = ({
   image = '',
   url = '',
   chainName,
-  youtubeKey
+  youtubeKey,
+  onImagePreview
 }) => {
   const ctaEnabled = Boolean(cta);
 
@@ -224,13 +225,14 @@ export const Notification : React.FC<NotificationProps> = ({
                   style={[styles.msgImg, contentMsgImgStyle]}
                   fileURL={image}
                   resizeMode={containMode}
-                  // onPress={(fileURL: string) => {
-                  //   if (onImagePreview) {
-                  //     onImagePreview(fileURL);
-                  //   }
-                  // }}
-                  onPress={() => {
-                    setIsVisible(true);
+                  onPress={(fileURI: string) => {
+                    if (onImagePreview) {
+                      // means List view gallery method is present.
+                      onImagePreview(fileURI);
+                    } else {
+                      // use Item's own view method
+                      setIsVisible(true);
+                    }
                   }}
                 />
               </View>

@@ -17,6 +17,8 @@ import GLOBALS from '../../globals';
 
 const MAX_ATTEMPTS = 3;
 
+const badImgPath = '../../assets/frownface.png';
+
 const usePrevious = <T,>(value: T): T | undefined => {
   const ref = useRef<T>();
   useEffect(() => {
@@ -172,7 +174,7 @@ export const ImageDownloadWithIndicator = (props: ImageDownloadWithIndicatorProp
     return (
       <Image
         style={styles.image}
-        source={require('../../assets/frownface.png')}
+        source={require(badImgPath)}
         resizeMode={modifiedResizeMode as ImageResizeMode}
       />
     );

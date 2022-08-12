@@ -180,11 +180,11 @@ export const ImageDownloadWithIndicator = (props: ImageDownloadWithIndicatorProp
     );
   };
 
-  const renderBotImageView = (botImgPath: ImageSourcePropType) => {
+  const renderImageSourceView = (imgSrcPath: ImageSourcePropType) => {
     return (
       <Image
         style={styles.image}
-        source={botImgPath}
+        source={imgSrcPath}
         resizeMode={modifiedResizeMode as ImageResizeMode}
       />
     );
@@ -194,6 +194,10 @@ export const ImageDownloadWithIndicator = (props: ImageDownloadWithIndicatorProp
     // console.log('\n\n\n Debug info:  ');
     // console.log({ indicator, downloading, defaulted, imgsrc: props.imgsrc, fileURIExists: !!fileURI });
 
+    if (props.imgsrc) {
+      return renderImageSourceView(props.imgsrc);
+    }
+    
     if (indicator) {
       return <EPNSActivity style={styles.activity} size="small" />;
     }
@@ -202,12 +206,8 @@ export const ImageDownloadWithIndicator = (props: ImageDownloadWithIndicatorProp
       return renderDownloadingView();
     }
 
-    if (defaulted) {
+    if (defaulted || !fileURI) {
       return renderBadImageView();
-    }
-
-    if (props.imgsrc) {
-      return renderBotImageView(props.imgsrc);
     }
 
     return (

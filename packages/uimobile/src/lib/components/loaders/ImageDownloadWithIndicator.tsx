@@ -202,7 +202,7 @@ export const ImageDownloadWithIndicator = (props: ImageDownloadWithIndicatorProp
       return renderDownloadingView();
     }
 
-    if (defaulted || !fileURI) {
+    if (defaulted) {
       return renderBadImageView();
     }
 

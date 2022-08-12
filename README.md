@@ -14,14 +14,17 @@ yarn add @react-native-masked-view/masked-view react-native-svg react-native-vid
 ```
 
 3. EXPO dependencies
-**IF you are a EXPO managed app**
+
+**How to install if you are a EXPO managed app**
 
 ```
 expo install expo-file-system
 expo install expo-linear-gradient
 ```
 
-**IF you are a RNCLI app**
+***How to install if you are a RNCLI app**
+
+[EXPO docs](https://docs.expo.dev/bare/installing-expo-modules/)
 ```
 npx install-expo-modules@45.0.0
 expo install expo-file-system
